@@ -3,14 +3,14 @@ def ingresar_calificacion():
     puntos = input()
     if puntos.isdecimal():
         puntos = int(puntos)
-        if puntos <= 0 or puntos > 5:
+        while puntos <= 0 or puntos > 5:
             print('Debe estar en una escala de 1 a 5')
-        else:
-            print('Ingrese el comentario')
-            comentario = input()
-            post = f'Puntos: {puntos}. Comentario: {comentario}'
-            with open("data.txt", 'a') as file_pc:
-                file_pc.write(f'{post}\n')
+            puntos = int(input())
+        print('Ingrese el comentario')
+        comentario = input()
+        post = f'Puntos: {puntos}. Comentario: {comentario}'
+        with open("data.txt", 'a') as file_pc:
+            file_pc.write(f'{post}\n')
     else:
         print('Debe ser un número del 1 al 5')
 

@@ -1,0 +1,3 @@
+Puntos: 5. Comentario: bien
+Puntos: 1. Comentario: mal
+Puntos: 2. Comentario: 2
