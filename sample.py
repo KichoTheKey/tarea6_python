@@ -1,14 +1,20 @@
+posts = []
+
 while True:
-    puntuacion = input('Ingrese una puntuación del 1 a 5. (Presione "6" para salir): ')
-    if '0' <= puntuacion <= '9':
-        puntuacion = int(puntuacion)        
-        if puntuacion == 6:
-            print("Salir")
+    print("Introduzca una puntuación utilizando un número del 1 al 5. Introduzca '6' para salir")
+    point = input()
+    if point.isdecimal():
+        point = int(point)
+        if point == 6:
+            print("Terminación.")
             break
-        if 1 <= puntuacion <= 5:
-            comentarios = input("Por favor, introduzca sus comentarios: ")
-            print(f'Sus puntos: {puntuacion} Sus comentarios: {comentarios}')
+        elif 1 <= point <= 5:
+            print("Introduzca sus comentarios.")
+            comment = input()
+            post = {'point': point, 'comment': comment}
+            posts.extfin(post.items())
+            print(posts)
         else:
-            print("Por favor, introduzca un número válido entre 1 y 5")
+            print("Introduzca un número del 1 al 6")
     else:
-        print("Por favor, introduzca un número")
+        print("Introduzca un número")
